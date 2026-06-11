@@ -9,9 +9,75 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as YoutubeRouteImport } from './routes/youtube'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as MarketInsightsRouteImport } from './routes/market-insights'
+import { Route as LearningCenterRouteImport } from './routes/learning-center'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as DisclaimerRouteImport } from './routes/disclaimer'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as MarketsIndexRouteImport } from './routes/markets/index'
+import { Route as MarketsStocksRouteImport } from './routes/markets/stocks'
+import { Route as MarketsIndicesRouteImport } from './routes/markets/indices'
+import { Route as MarketsForexRouteImport } from './routes/markets/forex'
+import { Route as MarketsCryptoRouteImport } from './routes/markets/crypto'
+import { Route as MarketsCommoditiesRouteImport } from './routes/markets/commodities'
 
+const YoutubeRoute = YoutubeRouteImport.update({
+  id: '/youtube',
+  path: '/youtube',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketInsightsRoute = MarketInsightsRouteImport.update({
+  id: '/market-insights',
+  path: '/market-insights',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LearningCenterRoute = LearningCenterRouteImport.update({
+  id: '/learning-center',
+  path: '/learning-center',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DisclaimerRoute = DisclaimerRouteImport.update({
+  id: '/disclaimer',
+  path: '/disclaimer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -22,35 +88,254 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MarketsIndexRoute = MarketsIndexRouteImport.update({
+  id: '/markets/',
+  path: '/markets/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketsStocksRoute = MarketsStocksRouteImport.update({
+  id: '/markets/stocks',
+  path: '/markets/stocks',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketsIndicesRoute = MarketsIndicesRouteImport.update({
+  id: '/markets/indices',
+  path: '/markets/indices',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketsForexRoute = MarketsForexRouteImport.update({
+  id: '/markets/forex',
+  path: '/markets/forex',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketsCryptoRoute = MarketsCryptoRouteImport.update({
+  id: '/markets/crypto',
+  path: '/markets/crypto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketsCommoditiesRoute = MarketsCommoditiesRouteImport.update({
+  id: '/markets/commodities',
+  path: '/markets/commodities',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/blog': typeof BlogRoute
+  '/contact': typeof ContactRoute
+  '/disclaimer': typeof DisclaimerRoute
+  '/faq': typeof FaqRoute
+  '/learning-center': typeof LearningCenterRoute
+  '/market-insights': typeof MarketInsightsRoute
+  '/privacy': typeof PrivacyRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
+  '/youtube': typeof YoutubeRoute
+  '/markets/commodities': typeof MarketsCommoditiesRoute
+  '/markets/crypto': typeof MarketsCryptoRoute
+  '/markets/forex': typeof MarketsForexRoute
+  '/markets/indices': typeof MarketsIndicesRoute
+  '/markets/stocks': typeof MarketsStocksRoute
+  '/markets/': typeof MarketsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/blog': typeof BlogRoute
+  '/contact': typeof ContactRoute
+  '/disclaimer': typeof DisclaimerRoute
+  '/faq': typeof FaqRoute
+  '/learning-center': typeof LearningCenterRoute
+  '/market-insights': typeof MarketInsightsRoute
+  '/privacy': typeof PrivacyRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
+  '/youtube': typeof YoutubeRoute
+  '/markets/commodities': typeof MarketsCommoditiesRoute
+  '/markets/crypto': typeof MarketsCryptoRoute
+  '/markets/forex': typeof MarketsForexRoute
+  '/markets/indices': typeof MarketsIndicesRoute
+  '/markets/stocks': typeof MarketsStocksRoute
+  '/markets': typeof MarketsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/blog': typeof BlogRoute
+  '/contact': typeof ContactRoute
+  '/disclaimer': typeof DisclaimerRoute
+  '/faq': typeof FaqRoute
+  '/learning-center': typeof LearningCenterRoute
+  '/market-insights': typeof MarketInsightsRoute
+  '/privacy': typeof PrivacyRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/terms': typeof TermsRoute
+  '/youtube': typeof YoutubeRoute
+  '/markets/commodities': typeof MarketsCommoditiesRoute
+  '/markets/crypto': typeof MarketsCryptoRoute
+  '/markets/forex': typeof MarketsForexRoute
+  '/markets/indices': typeof MarketsIndicesRoute
+  '/markets/stocks': typeof MarketsStocksRoute
+  '/markets/': typeof MarketsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/contact'
+    | '/disclaimer'
+    | '/faq'
+    | '/learning-center'
+    | '/market-insights'
+    | '/privacy'
+    | '/sitemap.xml'
+    | '/terms'
+    | '/youtube'
+    | '/markets/commodities'
+    | '/markets/crypto'
+    | '/markets/forex'
+    | '/markets/indices'
+    | '/markets/stocks'
+    | '/markets/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about'
-  id: '__root__' | '/' | '/about'
+  to:
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/contact'
+    | '/disclaimer'
+    | '/faq'
+    | '/learning-center'
+    | '/market-insights'
+    | '/privacy'
+    | '/sitemap.xml'
+    | '/terms'
+    | '/youtube'
+    | '/markets/commodities'
+    | '/markets/crypto'
+    | '/markets/forex'
+    | '/markets/indices'
+    | '/markets/stocks'
+    | '/markets'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/contact'
+    | '/disclaimer'
+    | '/faq'
+    | '/learning-center'
+    | '/market-insights'
+    | '/privacy'
+    | '/sitemap.xml'
+    | '/terms'
+    | '/youtube'
+    | '/markets/commodities'
+    | '/markets/crypto'
+    | '/markets/forex'
+    | '/markets/indices'
+    | '/markets/stocks'
+    | '/markets/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  BlogRoute: typeof BlogRoute
+  ContactRoute: typeof ContactRoute
+  DisclaimerRoute: typeof DisclaimerRoute
+  FaqRoute: typeof FaqRoute
+  LearningCenterRoute: typeof LearningCenterRoute
+  MarketInsightsRoute: typeof MarketInsightsRoute
+  PrivacyRoute: typeof PrivacyRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  TermsRoute: typeof TermsRoute
+  YoutubeRoute: typeof YoutubeRoute
+  MarketsCommoditiesRoute: typeof MarketsCommoditiesRoute
+  MarketsCryptoRoute: typeof MarketsCryptoRoute
+  MarketsForexRoute: typeof MarketsForexRoute
+  MarketsIndicesRoute: typeof MarketsIndicesRoute
+  MarketsStocksRoute: typeof MarketsStocksRoute
+  MarketsIndexRoute: typeof MarketsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/youtube': {
+      id: '/youtube'
+      path: '/youtube'
+      fullPath: '/youtube'
+      preLoaderRoute: typeof YoutubeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/market-insights': {
+      id: '/market-insights'
+      path: '/market-insights'
+      fullPath: '/market-insights'
+      preLoaderRoute: typeof MarketInsightsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/learning-center': {
+      id: '/learning-center'
+      path: '/learning-center'
+      fullPath: '/learning-center'
+      preLoaderRoute: typeof LearningCenterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/disclaimer': {
+      id: '/disclaimer'
+      path: '/disclaimer'
+      fullPath: '/disclaimer'
+      preLoaderRoute: typeof DisclaimerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -65,12 +350,70 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/markets/': {
+      id: '/markets/'
+      path: '/markets'
+      fullPath: '/markets/'
+      preLoaderRoute: typeof MarketsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/markets/stocks': {
+      id: '/markets/stocks'
+      path: '/markets/stocks'
+      fullPath: '/markets/stocks'
+      preLoaderRoute: typeof MarketsStocksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/markets/indices': {
+      id: '/markets/indices'
+      path: '/markets/indices'
+      fullPath: '/markets/indices'
+      preLoaderRoute: typeof MarketsIndicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/markets/forex': {
+      id: '/markets/forex'
+      path: '/markets/forex'
+      fullPath: '/markets/forex'
+      preLoaderRoute: typeof MarketsForexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/markets/crypto': {
+      id: '/markets/crypto'
+      path: '/markets/crypto'
+      fullPath: '/markets/crypto'
+      preLoaderRoute: typeof MarketsCryptoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/markets/commodities': {
+      id: '/markets/commodities'
+      path: '/markets/commodities'
+      fullPath: '/markets/commodities'
+      preLoaderRoute: typeof MarketsCommoditiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  BlogRoute: BlogRoute,
+  ContactRoute: ContactRoute,
+  DisclaimerRoute: DisclaimerRoute,
+  FaqRoute: FaqRoute,
+  LearningCenterRoute: LearningCenterRoute,
+  MarketInsightsRoute: MarketInsightsRoute,
+  PrivacyRoute: PrivacyRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  TermsRoute: TermsRoute,
+  YoutubeRoute: YoutubeRoute,
+  MarketsCommoditiesRoute: MarketsCommoditiesRoute,
+  MarketsCryptoRoute: MarketsCryptoRoute,
+  MarketsForexRoute: MarketsForexRoute,
+  MarketsIndicesRoute: MarketsIndicesRoute,
+  MarketsStocksRoute: MarketsStocksRoute,
+  MarketsIndexRoute: MarketsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
