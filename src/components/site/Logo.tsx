@@ -1,14 +1,34 @@
 import { Link } from "@tanstack/react-router";
+import logoImg from "../../assets/logo.png";
 
-export function Logo({ light = false }: { light?: boolean }) {
+export function Logo({ 
+  light = false,
+  className = ""
+}: { 
+  light?: boolean;
+  className?: string;
+}) {
   return (
-    <Link to="/" className="flex items-center gap-2 group">
-      <span className="grid place-items-center h-9 w-9 rounded-md gradient-gold text-white font-display font-bold text-lg shadow-sm">
-        N
-      </span>
-      <span className={`font-display font-bold text-xl tracking-tight ${light ? "text-white" : "text-navy-deep"}`}>
-        Naji <span className="text-gold">&amp;</span> Co
-      </span>
+    <Link to="/" className={`inline-flex items-center group ${className}`}>
+      {light ? (
+        // Footer variation: Render transparent logo inside a soft white card to contrast with the dark navy background
+        <div className="bg-white p-2 rounded-xl shadow-sm transition hover:bg-white/95 flex items-center justify-center">
+          <img 
+            src={logoImg} 
+            alt="Naji & Co." 
+            className="h-12 sm:h-14 w-auto object-contain"
+          />
+        </div>
+      ) : (
+        // Header variation: Merges directly with light background, and adds a white backing card in dark mode
+        <div className="dark:bg-white/95 dark:p-1.5 dark:rounded-lg dark:shadow-sm transition-all duration-200 flex items-center justify-center">
+          <img 
+            src={logoImg} 
+            alt="Naji & Co." 
+            className="h-16 sm:h-[100px] w-auto object-contain transition group-hover:opacity-90 dark:h-12 dark:sm:h-[84px]"
+          />
+        </div>
+      )}
     </Link>
   );
 }
