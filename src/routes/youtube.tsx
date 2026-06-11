@@ -43,8 +43,8 @@ function YoutubePage() {
           {featured.map((v) => (
             <article key={v.t} className="rounded-xl border border-border bg-card overflow-hidden hover:shadow-xl transition group">
               <div className="aspect-video gradient-navy relative grid place-items-center">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.18),transparent_60%)]" />
-                <div className="relative grid h-16 w-16 place-items-center rounded-full gradient-gold text-navy-deep shadow-xl group-hover:scale-110 transition"><Play className="h-7 w-7 ml-1" fill="currentColor" /></div>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,113,227,0.18),transparent_60%)]" />
+                <div className="relative grid h-16 w-16 place-items-center rounded-full gradient-gold text-white shadow-xl group-hover:scale-110 transition"><Play className="h-7 w-7 ml-1" fill="currentColor" /></div>
                 <span className="absolute bottom-3 right-3 bg-navy-deep/90 text-white text-xs px-2 py-1 rounded">{v.d}</span>
               </div>
               <div className="p-5">

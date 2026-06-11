@@ -58,7 +58,7 @@ function LearningCenter() {
           <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {resources.map((r) => (
               <div key={r.title} className="rounded-xl border border-border bg-card p-6 flex gap-4 items-start hover:border-gold transition">
-                <div className="grid h-11 w-11 place-items-center rounded-md gradient-gold text-navy-deep flex-shrink-0"><r.icon className="h-5 w-5" /></div>
+                <div className="grid h-11 w-11 place-items-center rounded-md gradient-gold text-white flex-shrink-0"><r.icon className="h-5 w-5" /></div>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wider text-gold">{r.type} · {r.time}</p>
                   <h3 className="mt-1 font-semibold text-navy-deep">{r.title}</h3>
@@ -73,7 +73,7 @@ function LearningCenter() {
             </div>
             <form className="flex gap-2 w-full sm:w-auto" onSubmit={(e) => e.preventDefault()}>
               <input type="email" required placeholder="you@example.com" className="rounded-md bg-white/10 border border-white/20 px-4 py-3 text-sm placeholder-white/50 text-white w-full sm:w-72" />
-              <button className="rounded-md gradient-gold px-5 py-3 text-sm font-semibold text-navy-deep">Join</button>
+              <button className="rounded-md gradient-gold px-5 py-3 text-sm font-semibold text-white">Join</button>
             </form>
           </div>
         </div>

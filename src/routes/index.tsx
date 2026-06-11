@@ -58,7 +58,7 @@ function Index() {
               Learn trading, investing and market analysis with clear, beginner-friendly lessons from Naji &amp; Co. Build real understanding — not hype.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
-              <Link to="/learning-center" className="inline-flex items-center gap-2 rounded-md gradient-gold px-7 py-3.5 text-sm font-semibold text-navy-deep shadow-lg hover:opacity-90 transition">
+              <Link to="/learning-center" className="inline-flex items-center gap-2 rounded-md gradient-gold px-7 py-3.5 text-sm font-semibold text-white shadow-lg hover:opacity-90 transition">
                 Start Learning <ArrowRight className="h-4 w-4" />
               </Link>
               <Link to="/youtube" className="inline-flex items-center gap-2 rounded-md border border-white/30 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white hover:bg-white/10 transition">
@@ -115,7 +115,7 @@ function Index() {
             {markets.map((m) => (
               <Link key={m.to} to={m.to} className="group rounded-xl border border-border bg-card p-7 hover:border-gold hover:shadow-xl transition-all">
                 <div className="flex items-center justify-between">
-                  <div className="grid h-12 w-12 place-items-center rounded-lg gradient-gold text-navy-deep">
+                  <div className="grid h-12 w-12 place-items-center rounded-lg gradient-gold text-white">
                     <m.icon className="h-6 w-6" />
                   </div>
                   <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-gold group-hover:translate-x-1 transition" />
@@ -179,7 +179,7 @@ function Index() {
               <div key={v.t} className="rounded-xl bg-white/5 border border-white/10 overflow-hidden hover:border-gold transition">
                 <div className="aspect-video bg-navy-deep relative grid place-items-center">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.18),transparent_60%)]" />
-                  <div className="relative grid h-14 w-14 place-items-center rounded-full gradient-gold text-navy-deep shadow-lg">
+                  <div className="relative grid h-14 w-14 place-items-center rounded-full gradient-gold text-white shadow-lg">
                     <Youtube className="h-6 w-6" />
                   </div>
                 </div>
@@ -222,7 +222,7 @@ function Index() {
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-white">Ready to take the first step?</h2>
               <p className="mt-3 text-white/75">Get in touch — we'll guide you to the right starting point for your journey.</p>
             </div>
-            <Link to="/contact" className="inline-flex items-center gap-2 rounded-md gradient-gold px-7 py-3.5 text-sm font-semibold text-navy-deep shadow-lg hover:opacity-90 transition">
+            <Link to="/contact" className="inline-flex items-center gap-2 rounded-md gradient-gold px-7 py-3.5 text-sm font-semibold text-white shadow-lg hover:opacity-90 transition">
               Contact Naji &amp; Co <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

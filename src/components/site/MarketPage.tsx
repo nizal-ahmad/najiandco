@@ -68,7 +68,7 @@ export function MarketPage({
             <h3 className="font-display text-xl font-bold">Want to go deeper?</h3>
             <p className="text-sm text-white/75">Browse structured lessons and videos in our Learning Center.</p>
           </div>
-          <Link to="/learning-center" className="inline-flex items-center gap-2 rounded-md gradient-gold px-5 py-3 text-sm font-semibold text-navy-deep">Open Learning Center <ArrowRight className="h-4 w-4" /></Link>
+          <Link to="/learning-center" className="inline-flex items-center gap-2 rounded-md gradient-gold px-5 py-3 text-sm font-semibold text-white">Open Learning Center <ArrowRight className="h-4 w-4" /></Link>
         </div>
       </section>
     </SiteLayout>

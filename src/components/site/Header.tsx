@@ -51,7 +51,7 @@ export function Header() {
           ))}
         </nav>
         <div className="hidden lg:flex items-center gap-3">
-          <Link to="/contact" className="inline-flex items-center rounded-md gradient-gold px-4 py-2 text-sm font-semibold text-navy-deep shadow-sm hover:opacity-90 transition">Get in touch</Link>
+          <Link to="/contact" className="inline-flex items-center rounded-md gradient-gold px-4 py-2 text-sm font-semibold text-white shadow-sm hover:opacity-90 transition">Get in touch</Link>
         </div>
         <button className="lg:hidden p-2 -mr-2" onClick={() => setOpen(!open)} aria-label="Menu">
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}

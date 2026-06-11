@@ -32,7 +32,7 @@ function MarketsIndex() {
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {markets.map((m) => (
             <Link key={m.to} to={m.to} className="group rounded-xl border border-border bg-card p-7 hover:border-gold hover:shadow-xl transition-all">
-              <div className="grid h-12 w-12 place-items-center rounded-lg gradient-gold text-navy-deep"><m.icon className="h-6 w-6" /></div>
+              <div className="grid h-12 w-12 place-items-center rounded-lg gradient-gold text-white"><m.icon className="h-6 w-6" /></div>
               <h2 className="mt-5 font-display text-xl font-semibold text-navy-deep">{m.title}</h2>
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{m.desc}</p>
               <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy group-hover:text-gold">Explore <ArrowRight className="h-4 w-4" /></span>
