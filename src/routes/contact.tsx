@@ -62,7 +62,7 @@ function ContactPage() {
           </form>
         </div>
         <aside className="space-y-4">
-          <Info icon={Mail} title="Email" body="hello@najiandco.com" href="mailto:hello@najiandco.com" />
+          <Info icon={Mail} title="Email" body="official@najiandco.com" href="mailto:official@najiandco.com" />
           <Info icon={Phone} title="Phone" body="+1 (555) 012-3456" href="tel:+15550123456" />
           <Info icon={MessageCircle} title="WhatsApp" body="Chat with us" href="https://wa.me/15550123456" gold />
           <Info icon={MapPin} title="Location" body="Global · Remote first" />

@@ -43,7 +43,7 @@ export function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Contact</h4>
             <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-gold" /> hello@najiandco.com</li>
+              <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-gold" /> <a href="mailto:official@najiandco.com" className="hover:text-gold">official@najiandco.com</a></li>
               <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-gold" /> +1 (555) 012-3456</li>
             </ul>
             <div className="mt-5">
