@@ -1,4 +1,7 @@
-const items = [
+import { useQuery } from "@tanstack/react-query";
+import { getMarketPrices } from "../../lib/api/market.functions";
+
+const defaultItems = [
   { sym: "EUR/USD", price: "1.0842", chg: "+0.21%", up: true },
   { sym: "GBP/USD", price: "1.2674", chg: "-0.08%", up: false },
   { sym: "USD/JPY", price: "152.34", chg: "+0.42%", up: true },
@@ -14,6 +17,14 @@ const items = [
 ];
 
 export function Ticker() {
+  const { data: items = defaultItems } = useQuery({
+    queryKey: ["marketPrices"],
+    queryFn: () => getMarketPrices(),
+    refetchInterval: 30000, // Refetch every 30 seconds
+    refetchOnWindowFocus: true,
+    initialData: defaultItems,
+  });
+
   const loop = [...items, ...items];
   return (
     <div className="bg-navy-deep text-white/90 border-b border-white/10 overflow-hidden">
@@ -26,7 +37,7 @@ export function Ticker() {
           </div>
         ))}
       </div>
-      <p className="sr-only">Educational demo ticker — not live market data.</p>
+      <p className="sr-only">Live financial market rates ticker.</p>
     </div>
   );
 }
